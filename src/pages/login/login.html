@@ -1,0 +1,36 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary" >
+    <ion-title> Connexion </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating color="secondary" >Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color="secondary" >Password</ion-label>
+      <ion-input  type="password" [(ngModel)]="password" ></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button  block primary color="secondary" (click) = "connexion()" > Connexion </button>
+      <button ion-button  block primary color="secondary"  outline > Créer un compte </button>
+    </div>
+    <div padding>
+        <p color="danger" align="center" ><b>{{feedback}}</b></p>
+    </div>
+  </ion-list>
+</ion-content>

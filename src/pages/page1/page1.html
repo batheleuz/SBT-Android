@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color='secondary'></ion-icon>
+    </button>
+    <ion-title> Bus Travel Service </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list inset>
+  <ion-item>
+    Latitude:
+      {{locationTracker.lat}}
+  </ion-item>
+  <ion-item>
+    Longitude:
+    {{locationTracker.lng}}
+  </ion-item>
+  <ion-item>
+    Vitesse:
+    {{locationTracker.vit}}
+  </ion-item>
+</ion-list>
+<button ion-button block color='secondary' (click)="start()">
+  <ion-icon name="pin" padding></ion-icon> Activer le Traceur
+</button>
+<button ion-button block color='secondary' (click)="stop()"  outline>
+  Arrêter
+</button>
+</ion-content>
